@@ -1,0 +1,297 @@
+
+/* PALETA DE 5 CORES
+   1. Verde escuro: #263D2D
+   2. Verde médio:  #557C55
+   3. Verde claro:  #A9B388
+   4. Bege:         #F4EBD0
+   5. Marrom:       #8B5E3C
+*/
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #F4EBD0;
+    color: #263D2D;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    padding: 90px 8%;
+}
+
+/* CABEÇALHO */
+
+.header {
+    background-color: #263D2D;
+    color: #F4EBD0;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.header nav {
+    display: flex;
+    gap: 25px;
+}
+
+.header nav a {
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #A9B388;
+}
+
+/* BOTÕES */
+
+.btn {
+    display: inline-block;
+    background-color: #557C55;
+    color: #F4EBD0;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-weight: 800;
+    margin-top: 20px;
+    border: 2px solid #557C55;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #263D2D;
+    border-color: #263D2D;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(38, 61, 45, 0.2);
+}
+
+.btn-secondary {
+    background-color: #8B5E3C;
+    border-color: #8B5E3C;
+}
+
+.btn-secondary:hover {
+    background-color: #263D2D;
+    border-color: #263D2D;
+}
+
+/* SEÇÃO 1 - ESQUERDA */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background:
+        radial-gradient(
+            circle at 85% 30%,
+            #A9B388 0,
+            transparent 30%
+        ),
+        linear-gradient(135deg, #F4EBD0, #A9B388);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tag {
+    display: inline-block;
+    color: #8B5E3C;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 520px;
+    font-size: 1.1rem;
+}
+
+/* SEÇÃO 2 - CENTRO */
+
+.sobre {
+    text-align: center;
+    background-color: #F4EBD0;
+}
+
+.sobre h2,
+.section-heading h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+}
+
+/* SEÇÃO 3 - CARDS */
+
+.curiosidades {
+    background-color: #A9B388;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #F4EBD0;
+    padding: 30px;
+    border-radius: 15px;
+    border-bottom: 5px solid #557C55;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(38, 61, 45, 0.15);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 0.98rem;
+}
+
+/* SEÇÃO 4 - DIREITA */
+
+.convite {
+    background-color: #263D2D;
+    color: #F4EBD0;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.convite-content {
+    max-width: 600px;
+}
+
+.convite h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 20px;
+}
+
+.convite .tag {
+    color: #A9B388;
+}
+
+/* FOOTER - DIREITA */
+
+.footer {
+    background-color: #8B5E3C;
+    color: #F4EBD0;
+    padding: 40px 8%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.footer-content {
+    max-width: 500px;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 0.85rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header nav {
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .footer,
+    .convite {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
